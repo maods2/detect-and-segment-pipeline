@@ -132,29 +132,6 @@ if __name__ == "__main__":
             except:
                 continue
         
-# if __name__ == "__main__":
-#     matplotlib.use('Agg') # Using this to avoid plt to plot image on gui
-#     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-#     PIL.Image.MAX_IMAGE_PIXELS = 933120000
-#     owl_detector = OwlViTWrapper()
-#     sam_setmenter = SAMWrapper()
-    
-#     image_path = r'C:\Users\Maods\Documents\Development\Mestrado\project-tree\Imagens Rede Eletrica\240531 Samung A32 - Camera Celular\20240531_070713.jpg'
-#     raw_image = load_image(path=image_path)
-
-#     prompt = [["an single tree"]]
-#     # prompt = [["a photo of a tree"]]
-#     boxes, points = owl_detector.detect_objects(image=raw_image, texts=prompt)
-#     show_points_on_image(raw_image, points, save_on='./data/output/image(points).jpg', title=prompt[0][0])
-#     show_boxes_on_image(raw_image, boxes, save_on='./data/output/image(box).jpg', title=prompt[0][0]) 
-    
-#     input_points = [points]
-#     input_boxes = [boxes]
-#     masks_p, scores_p = sam_setmenter.segment_objects(image=raw_image, input_points=input_points)
-#     show_masks_on_image(raw_image, masks_p[0], scores_p, segment_type="points", save_on='./data/output/image(seg-points).jpg')
-    
-#     masks_b, scores_b = sam_setmenter.segment_objects(image=raw_image, input_boxes=input_boxes)    
-#     show_masks_on_image(raw_image, masks_b[0][0], scores_b[:, 0, :], segment_type="boxes", save_on='./data/output/image(seg-boxes).jpg')
 
     
     
